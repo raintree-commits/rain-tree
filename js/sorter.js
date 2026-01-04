@@ -1,3 +1,14 @@
+const left = document.getElementById("left");
+const right = document.getElementById("right");
+
+const leftImg = document.getElementById("leftImg");
+const rightImg = document.getElementById("rightImg");
+
+const leftName = document.getElementById("leftName");
+const rightName = document.getElementById("rightName");
+
+const progress = document.getElementById("progress");
+
 let currentA, currentB;
 let battleCount = 0;
 const totalBattles = members.length * 5;
