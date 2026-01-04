@@ -12,7 +12,7 @@ function pickBattle(){
   const candidates = [...members]
     .sort((a,b)=>b.rating - a.rating)
     .slice(0,8)
-    .sort(()=>Math.random()-0.5);
+    .sort(()=>Math.random() - 0.5);
 
   currentA = candidates[0];
   currentB = candidates[1];
@@ -23,11 +23,12 @@ function pickBattle(){
 function renderBattle(){
   leftImg.src = currentA.img;
   rightImg.src = currentB.img;
+
   leftName.innerText = currentA.name[currentLang];
   rightName.innerText = currentB.name[currentLang];
 
-  left.onclick = ()=>battle(currentA, currentB);
-  right.onclick = ()=>battle(currentB, currentA);
+  left.onclick = () => battle(currentA, currentB);
+  right.onclick = () => battle(currentB, currentA);
 }
 
 function battle(winner, loser){
@@ -38,13 +39,15 @@ function battle(winner, loser){
   loser.rating += K * (0 - (1 - expected));
 
   battleCount++;
-  progress.style.width = (battleCount/totalBattles)*100 + "%";
+  progress.style.width =
+    (battleCount / totalBattles) * 100 + "%";
 
   pickBattle();
 }
 
 function showResult(){
   const ranking = [...members].sort((a,b)=>b.rating - a.rating);
+
   document.body.innerHTML = ranking.map((m,i)=>`
     <div>${i+1}. ${m.name[currentLang]}</div>
   `).join("");
