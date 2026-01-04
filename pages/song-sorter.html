@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Song Sorter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-[#e8fafa] min-h-screen p-4">
+
+<div class="max-w-xl mx-auto">
+
+<h1 class="text-center text-2xl font-bold text-[#3ccfcf] mb-4">
+  Song Sorter
+</h1>
+
+<iframe id="top" class="w-full rounded mb-2" height="80"></iframe>
+<button onclick="pick('top')" class="btn-main w-full mb-4">
+  Pilih Lagu Ini
+</button>
+
+<iframe id="bottom" class="w-full rounded mb-2" height="80"></iframe>
+<button onclick="pick('bottom')" class="btn-main w-full">
+  Pilih Lagu Ini
+</button>
+
+</div>
+
+<script src="../data/songs.js"></script>
+<script src="../js/song-sorter.js"></script>
+</body>
+</html>
