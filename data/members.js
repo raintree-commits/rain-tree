@@ -21,7 +21,7 @@ const members = [
   {
     id: 4,
     name: { id: "Endo Rino", en: "Endo Rino", jp: "遠藤莉乃" },
-    img: "assets/img/members/Endi_Rino.jpeg", // Sesuai list: Endi_Rino.jpeg
+    img: "assets/img/members/Endo_Rino.jpeg", // Sesuai list: Endi_Rino.jpeg
     rating: 1000
   },
   {
